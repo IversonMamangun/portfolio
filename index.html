@@ -40,8 +40,7 @@
             <div class="home-content">
                 <h3>Welcome to My Website!</h3>
                 <h1>Hi, I'm Iverson Mamangun.</h1>
-                <h3>And I'm an aspiring <span class="multiple-text"></span></h3>
-                <p>I'm an IT student at Don Honorio Ventura State University, and I’m passionate about technology. I love working on web development, Programming. I enjoy learning new things and keeping up with the latest tech trends. Feel free to explore my site and get in touch if you’d like to connect!</p>
+                <p>I'm an IT student at Don Honorio Ventura State University, and I’m passionate about technology. I love working on web development and Programming. I enjoy learning new things and keeping up with the latest tech trends. Feel free to explore my site and get in touch if you’d like to connect!</p>
                 <div class="social-media">
                     <a href="https://www.facebook.com/iverson.mamangun"><i class='bx bxl-facebook' ></i></a>
                     <a href="https://www.tiktok.com/@mamanguniverson?_t=8cXuPpTrtfm&_r=1&fbclid=IwAR042SPvx6l0xR-m6Dhrlowk_ySC5akjoKihPgjCTOJWzhowS_ZBWpO2SNo"><i class='bx bxl-tiktok' ></i></i></i></a>
@@ -249,9 +248,30 @@
         /*===================navbar================*/
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
+let navList = document.querySelector('.nav-list')
 menuIcon.onclick = () =>{
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
+
+    if (navbar.classList.contains('active')) {
+        console.log("true");
+        navList.innerHTML = `
+            <li><a class="nav-text active" href="#home">Home</a></li>
+            <li><a class="nav-text" href="#about">About</a></li>
+            <li><a class="nav-text" href="#portfolio">Project</a></li>
+            <li><a class="nav-text" href="#skill">Skills</a></li>
+            <li><a class="nav-text" href="#contact">Contact</a></li>
+            <li><a class="nav-text" href="#social">Social Media</a></li>`;
+    } else {
+        console.log("false");
+        navList.innerHTML = `
+            <li><a class="nav-text active" href="#home">Home</a></li>
+            <li><a class="nav-text" href="#about">About</a></li>
+            <li><a class="nav-text" href="#portfolio">Project</a></li>
+            <li><a class="nav-text" href="#skill">Skills</a></li>`;
+    }
+    
+    
 };
 
 let sections = document.querySelectorAll('section');

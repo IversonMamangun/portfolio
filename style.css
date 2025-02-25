@@ -584,6 +584,7 @@ footer {
         width: 30%;
         height: 470px;
         transition: 0.5s ease;
+        height: 100vh;
     }
     .navbar.active {
         opacity: 1;
